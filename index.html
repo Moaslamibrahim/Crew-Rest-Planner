@@ -23,12 +23,16 @@
   }
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html, body {
-    margin: 0; padding: 0; height: 100%;
+    margin: 0; padding: 0; min-height: 100%;
     background: var(--bg); color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overscroll-behavior-y: none;
   }
-  body { padding: max(28px, env(safe-area-inset-top)) 16px max(40px, env(safe-area-inset-bottom)); }
+  body { padding: max(28px, env(safe-area-inset-top)) 16px max(56px, env(safe-area-inset-bottom)); }
+  .footer {
+    text-align: center; font-size: 11px; letter-spacing: 0.06em; color: var(--muted);
+    margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--panel-border);
+  }
   .wrap { max-width: 480px; margin: 0 auto; }
   .eyebrow {
     font-family: "SF Mono", "Menlo", monospace; font-size: 11px; letter-spacing: 0.18em;
@@ -150,6 +154,8 @@
   </div>
 
   <div id="results"></div>
+
+  <div class="footer">Created by Claude AI</div>
 </div>
 
 <script>
